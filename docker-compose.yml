@@ -2,16 +2,18 @@ version: '2'
 
 services:
 
-  keycloak-server-saml:
-    container_name: 'keycloak-server-saml'
-    image: jboss/keycloak:3.4.1.Final
+  keycloak-server-ssl:
+    container_name: 'keycloak-server-ssl'
+    image: leanda
+    build:
+      context: .
     environment:
       - DB_VENDOR=H2
       - KEYCLOAK_USER=admin
       - KEYCLOAK_PASSWORD=admin
     ports:
-      - '18080:8080'
-      - '18443:8443'
+      - '8080:8080'
+      - '8443:8443'
     volumes:
       - kkdata:/data
 
