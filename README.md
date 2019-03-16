@@ -24,13 +24,13 @@ openssl pkcs12 -in keycloak.p12 -nocerts -nodes -out tls.key
 
 run from certificate-tool folder
 ```
-$ create_root_cA.sh.sh
+$ create_root_ca.sh
 ```
 it creates folder ./out and put there two files keyCloak.key and keyCloak.pem
 
 next run
 ```
-$ create_self-signed_certificate.sh.sh
+$ create_self-signed_certificate.sh
 ```
 
 it creates three files "tls.crt tls.csr tls.key" inside folder ./out
