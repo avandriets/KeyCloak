@@ -1,0 +1,14 @@
+[req]
+default_bits = 2048
+prompt = no
+default_md = sha256
+distinguished_name = dn
+
+[dn]
+C=US
+ST=New York
+L=Rochester
+O=End Point
+OU=ec2-35-180-69-249.eu-west-3.compute.amazonaws.com
+emailAddress=admin@ec2-35-180-69-249.eu-west-3.compute.amazonaws.com
+CN = ec2-35-180-69-249.eu-west-3.compute.amazonaws.com

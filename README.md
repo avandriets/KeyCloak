@@ -11,7 +11,7 @@ login: admin
 password: admin
 
 
-### generate certificate
+### generate certificate for local host
 
 keytool -genkey -alias ec2-35-180-69-249.eu-west-3.compute.amazonaws.com -keyalg RSA -keystore keycloak.jks -validity 10950
 keytool -importkeystore -srckeystore keycloak.jks -destkeystore keycloak.p12 -deststoretype PKCS12
