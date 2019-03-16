@@ -2,11 +2,9 @@ version: '2'
 
 services:
 
-  keycloak-server-ssl:
-    container_name: 'keycloak-server-ssl'
-    image: leanda
-    build:
-      context: .
+  keycloak-server-ssl-test:
+    container_name: 'keycloak-server-ssl-test'
+    image: jboss/keycloak:4.8.3.Final
     environment:
       - DB_VENDOR=H2
       - KEYCLOAK_USER=admin
@@ -16,6 +14,7 @@ services:
       - '8443:8443'
     volumes:
       - kkdata:/data
+      - ./certs:/etc/x509/https
 
 volumes:
   kkdata:
